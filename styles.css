@@ -1,0 +1,164 @@
+/* Smooth background gradient with slow color shift */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+  font-family: 'Consolas', 'Courier New', monospace;
+  overflow: hidden;
+}
+
+/* Container with frosted glass effect and gentle shadow */
+.container {
+  position: relative;
+  text-align: center;
+  z-index: 10;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 40px 55px;
+  border-radius: 25px;
+  box-shadow:
+    0 8px 24px rgba(0, 255, 255, 0.25),
+    inset 0 0 60px rgba(0, 255, 255, 0.15);
+  max-width: 460px;
+  width: 90vw;
+  user-select: none;
+  border: 1px solid rgba(0, 255, 255, 0.25);
+}
+
+/* Title with glowing code-style cyan effect */
+#mainTitle {
+  font-size: 3.6rem;
+  margin-bottom: 18px;
+  font-weight: 900;
+  color: #0ff;
+  text-shadow:
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff;
+  letter-spacing: 0.07em;
+  font-family: 'Courier New', monospace;
+  user-select: text;
+  animation: fadeIn 2s ease forwards;
+}
+
+/* Updated message color and style to glowing cyan */
+#typewriter {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #00ffff;
+  margin-top: 16px;
+  min-height: 80px;
+  font-weight: 600;
+  text-shadow:
+    1px 1px 6px rgba(0, 255, 255, 0.7),
+    0 0 12px rgba(0, 255, 255, 0.8);
+  font-family: 'Consolas', monospace;
+  user-select: text;
+  animation: fadeIn 4s ease forwards;
+}
+
+/* Glowing gradient button with subtle hover expansion */
+button {
+  margin-top: 36px;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #00ffff, #0077ff);
+  color: #001f3f;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow:
+    0 0 15px #00ffff,
+    0 0 30px #0077ff;
+  transition: all 0.35s ease;
+  user-select: none;
+  letter-spacing: 0.05em;
+}
+
+button:hover,
+button:focus {
+  outline: none;
+  box-shadow:
+    0 0 25px #00ffff,
+    0 0 55px #00bfff,
+    0 0 70px #0077ff;
+  transform: scale(1.08);
+}
+
+/* Subtle fadeIn animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Canvas with subtle transparent cyan glow background */
+#hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+  filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.7));
+  mix-blend-mode: screen;
+  user-select: none;
+}
+
+/* Message box style for message.html */
+.message-box {
+  max-width: 700px;
+  margin: 60px auto;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px 60px;
+  border-radius: 35px;
+  box-shadow:
+    0 8px 32px rgba(0, 255, 255, 0.7),
+    inset 0 0 60px rgba(0, 255, 255, 0.3);
+  border: 1px solid rgba(0, 255, 255, 0.25);
+  color: #00ffff;
+  font-family: 'Consolas', monospace;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  user-select: text;
+  text-shadow:
+    0 0 10px #00ffff;
+}
+
+.message-box h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #00ffff;
+  text-shadow:
+    0 0 10px #00ffff,
+    0 0 30px #0077ff;
+  text-align: center;
+  font-family: 'Courier New', monospace;
+  user-select: text;
+}
