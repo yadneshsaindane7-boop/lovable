@@ -1,4 +1,5 @@
 # Lovable Website By Yadnesh Saindane
+![Landing Page](lovable.jpg)
 
 A charming and visually appealing website built with HTML, CSS, and JavaScript, designed to showcase elegant UI and smooth interaction.
 
